@@ -36,16 +36,16 @@
       color:var(--text);
     }
 
-  /* centrage général */
-   .container{
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  background: var(--card);
-  padding: 28px 6vw;
-  border-radius: 0;
-}
-    
+    /* centrage général */
+    .container{
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      background: var(--card);
+      padding: 28px 6vw;
+      border-radius: 0;
+    }
+
     h1, h2, h3{
       margin: 0 0 12px 0;
       color: var(--brand);
@@ -215,65 +215,119 @@
       color: #777;
       font-weight: 700;
     }
-/* ===== NAVBAR FIXE ===== */
-.topnav{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
-}
 
-.topnav-inner{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 10px 18px;
-  display:flex;
-  gap:14px;
-  align-items:center;
-  justify-content:space-between;
-}
+    /* ===== NAVBAR FIXE ===== */
+    .topnav{
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
 
-.brand{
-  font-weight: 900;
-  color: var(--brand);
-  text-decoration:none;
-  white-space:nowrap;
-}
+    .topnav-inner{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 10px 18px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+    }
 
-.navlinks{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
+    .brand{
+      font-weight: 900;
+      color: var(--brand);
+      text-decoration:none;
+      white-space:nowrap;
+    }
 
-.navlinks a{
-  text-decoration:none;
-  color: var(--muted);
-  font-weight: 900;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border:1px solid transparent;
-}
+    .navlinks{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
 
-.navlinks a:hover{
-  color: var(--brand);
-  border-color: var(--border);
-  background:#fafafa;
-}
+    .navlinks a{
+      text-decoration:none;
+      color: var(--muted);
+      font-weight: 900;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border:1px solid transparent;
+    }
 
-/* Petit espace en haut pour que le menu ne cache pas les titres */
-section{ scroll-margin-top: 80px; }
+    .navlinks a:hover{
+      color: var(--brand);
+      border-color: var(--border);
+      background:#fafafa;
+    }
 
-/* Mobile : menu plus simple */
-@media (max-width: 720px){
-  .navlinks{ gap:6px; }
-  .navlinks a{ padding:6px 8px; font-size:14px; }
-}
+    /* Petit espace en haut pour que le menu ne cache pas les titres */
+    section{ scroll-margin-top: 80px; }
 
-    
+    /* Mobile : menu plus simple */
+    @media (max-width: 720px){
+      .navlinks{ gap:6px; }
+      .navlinks a{ padding:6px 8px; font-size:14px; }
+    }
+
+    /* ===== COURS & EXERCICES (NOUVEAU) ===== */
+    .module{
+      margin-top: 14px;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fafafa;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:12px;
+      margin-bottom:10px;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+    .badge.green{ border-color:#b7f0c8; background:#eafaf1; }
+    .badge.yellow{ border-color:#ffe5b5; background:#fff3df; }
+    .badge.blue{ border-color:#b9d9ff; background:#eef6ff; }
+
+    .exercise{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px;
+      margin-top:12px;
+    }
+
+    .exercise-title{
+      font-weight:900;
+      margin:0 0 8px 0;
+    }
+
+    details.corr{
+      margin-top:10px;
+      background: var(--bluebg);
+      border-left:5px solid #3498db;
+      border-radius:12px;
+      padding:10px 12px;
+    }
+
+    details.corr summary{
+      cursor:pointer;
+      font-weight:900;
+    }
+
+    .note{
+      margin-top:10px;
+      color:var(--muted);
+      font-weight:700;
+    }
   </style>
 </head>
 
@@ -309,13 +363,13 @@ section{ scroll-margin-top: 80px; }
     <h2>Formation Python complète</h2>
 
     <div class="cours">
-  <div class="cours-title">🎯 Objectif de la formation</div>
-  <p>
-    Cette formation est conçue pour les <strong>débutants</strong> et progresse jusqu’au
-    <strong>niveau licence</strong>. Chaque notion contient : explication simple, exemple,
-    exercices corrigés et quiz.
-  </p>
-</div>
+      <div class="cours-title">🎯 Objectif de la formation</div>
+      <p>
+        Cette formation est conçue pour les <strong>débutants</strong> et progresse jusqu’au
+        <strong>niveau licence</strong>. Chaque notion contient : explication simple, exemple,
+        exercices corrigés et quiz.
+      </p>
+    </div>
 
     <!-- Série 1 -->
     <section class="serie">
@@ -426,11 +480,261 @@ print(L[0])</code></pre>
 
     <section class="serie" id="serie9">
       <h3>Série 9 — POO (Quiz — Introduction Licence)</h3>
-      <p class="muted">Objectif : comprendre classes, objets, attributs, <code>__init__</code>.</p>
+      <p class="muted">Objectif : comprendre classes, objets, attributs, <code>_init_</code>.</p>
       <div class="quiz-list" data-serie="9"></div>
     </section>
 
+  </section><!-- fin #python -->
+
+  <!-- ===================== COURS & EXERCICES (AJOUTÉS) ===================== -->
+  <section id="cours-exercices">
+    <h2>📘 Cours & Exercices corrigés (Débutant → Avancé)</h2>
+    <p class="muted">
+      Méthode : <strong>Énoncé → Correction → Explication</strong>.  
+      Fais l’exercice d’abord, puis ouvre la correction.
+    </p>
+
+    <!-- Module Débutant -->
+    <div class="module">
+      <span class="badge green">Niveau Débutant</span>
+      <h3>Exercices fondamentaux</h3>
+
+      <!-- Somme -->
+      <div class="exercise">
+        <p class="exercise-title">Exercice — Somme de deux nombres</p>
+        <p><strong>Énoncé :</strong> Écrire un programme qui lit deux nombres à partir de l'utilisateur, puis calcule leur somme et l'affiche.</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>nb1 = int(input("Saisir le premier nombre : "))
+nb2 = int(input("Saisir le deuxième nombre : "))
+somme = nb1 + nb2
+print("La somme =", somme)</code></pre>
+          <p class="note"><strong>Explication :</strong> <code>input()</code> lit un texte, <code>int()</code> convertit en entier, puis on additionne avec <code>+</code>.</p>
+        </details>
+      </div>
+
+      <!-- Factorielle -->
+      <div class="exercise">
+        <p class="exercise-title">Exercice — Factorielle</p>
+        <p><strong>Énoncé :</strong> Lire un entier positif ou nul et calculer sa factorielle. Refuser les nombres négatifs.</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>n = int(input("Entrez un nombre entier positif : "))
+
+if n >= 0:
+    factorielle = 1
+    for i in range(1, n + 1):
+        factorielle *= i
+    print(f"La factorielle de {n} est {factorielle}")
+else:
+    print("Le nombre saisi est négatif.")</code></pre>
+          <p class="note"><strong>Explication :</strong> La factorielle de <code>n</code> = 1×2×…×n. On multiplie progressivement dans une boucle.</p>
+        </details>
+      </div>
+
+      <!-- Palindrome -->
+      <div class="exercise">
+        <p class="exercise-title">Exercice — Palindrome</p>
+        <p><strong>Énoncé :</strong> Demander un mot et déterminer s’il est un palindrome (ex : ressasser).</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>mot = input("Entrez un mot : ")
+if mot == mot[::-1]:
+    print("Le mot est un palindrome.")
+else:
+    print("Le mot n'est pas un palindrome.")</code></pre>
+          <p class="note"><strong>Explication :</strong> <code>mot[::-1]</code> inverse le mot. Si le mot = son inverse, c’est un palindrome.</p>
+        </details>
+      </div>
+    </div>
+
+    <!-- Module Intermédiaire -->
+    <div class="module">
+      <span class="badge yellow">Niveau Intermédiaire</span>
+      <h3>Boucles, calculs et logique</h3>
+
+      <!-- Somme & moyenne des n premiers entiers -->
+      <div class="exercise">
+        <p class="exercise-title">Exercice — Somme et moyenne des n premiers entiers</p>
+        <p><strong>Énoncé :</strong> Calculer la somme des n premiers entiers naturels, puis leur moyenne.</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>n = int(input("Entrez un nombre entier positif : "))
+while n < 1:
+    n = int(input("Entrez un nombre entier positif : "))
+
+somme = 0
+for i in range(1, n + 1):
+    somme += i
+
+moyenne = somme / n
+print("La somme des", n, "premiers entiers naturels est", somme)
+print("Leur moyenne est", moyenne)</code></pre>
+          <p class="note"><strong>Explication :</strong> On force <code>n</code> à être positif. Puis on additionne de 1 à n et on divise par n.</p>
+        </details>
+      </div>
+
+      <!-- Produit par additions successives -->
+      <div class="exercise">
+        <p class="exercise-title">Exercice — Produit par additions successives</p>
+        <p><strong>Énoncé :</strong> Lire deux entiers positifs A et B et calculer A×B comme A + A + … + A (B fois).</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>a = int(input("Entrez un premier entier positif : "))
+while a < 0:
+    a = int(input("Entrez un premier entier positif : "))
+
+b = int(input("Entrez un deuxième entier positif : "))
+while b < 0:
+    b = int(input("Entrez un deuxième entier positif : "))
+
+produit = 0
+for i in range(b):
+    produit += a
+
+print("Le produit de", a, "et", b, "est", produit)</code></pre>
+          <p class="note"><strong>Explication :</strong> Multiplier = additionner le même nombre plusieurs fois. On ajoute <code>a</code>, <code>b</code> fois.</p>
+        </details>
+      </div>
+
+      <!-- Décimal -> binaire -->
+      <div class="exercise">
+        <p class="exercise-title">Exercice — Conversion décimal → binaire</p>
+        <p><strong>Énoncé :</strong> Lire un nombre décimal (entier) et afficher son équivalent binaire.</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>dec = int(input("Entrez un nombre décimal : "))
+binaire = ""
+
+while dec > 0:
+    binaire = str(dec % 2) + binaire
+    dec //= 2
+
+print("Le nombre en binaire est :", binaire)</code></pre>
+          <p class="note"><strong>Explication :</strong> On divise par 2 et on garde les restes (0/1). En les lisant dans le bon ordre, on obtient le binaire.</p>
+        </details>
+      </div>
+
+      <!-- 12 réels : moyenne, variance, écart-type -->
+      <div class="exercise">
+        <p class="exercise-title">Exercice — 12 nombres réels : moyenne, variance, écart-type</p>
+        <p><strong>Énoncé :</strong> Lire 12 nombres réels et calculer la moyenne, la variance et l’écart-type.</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>import math
+
+nombres = []
+for i in range(12):
+    nombre = float(input("Entrez un nombre réel : "))
+    nombres.append(nombre)
+
+moyenne = sum(nombres) / len(nombres)
+variance = sum((x - moyenne) ** 2 for x in nombres) / len(nombres)
+ecart_type = math.sqrt(variance)
+
+print("Moyenne : ", moyenne)
+print("Variance : ", variance)
+print("Ecart-type : ", ecart_type)</code></pre>
+          <p class="note"><strong>Explication :</strong> Moyenne = somme/12. Variance = moyenne des (x−moyenne)². Écart-type = racine de la variance.</p>
+        </details>
+      </div>
+    </div>
+
+    <!-- Module Avancé / Licence -->
+    <div class="module">
+      <span class="badge blue">Niveau Avancé / Licence</span>
+      <h3>Mini-projet : Analyse d’un champ de cacao</h3>
+
+      <!-- Cacao 1 -->
+      <div class="exercise">
+        <p class="exercise-title">Champ de cacao 1 — Types de données et affichage</p>
+        <p><strong>Énoncé :</strong> Initialiser les variables du champ et les afficher correctement (une info par ligne).</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>nom_champ = "CacaoBon"
+surface = 10.5
+nombre_arbres = 1200
+rendement = 2.4
+
+print("Nom du champ :", nom_champ)
+print("Surface :", surface, "hectares")
+print("Nombre d'arbres :", nombre_arbres)
+print("Rendement moyen par arbre :", rendement, "kg")</code></pre>
+          <p class="note"><strong>Explication :</strong> Types : texte (str), décimal (float), entier (int). On affiche avec <code>print()</code>.</p>
+        </details>
+      </div>
+
+      <!-- Cacao 2 -->
+      <div class="exercise">
+        <p class="exercise-title">Champ de cacao 2 — Entrée utilisateur et rendement total</p>
+        <p><strong>Énoncé :</strong> Demander le nombre d’arbres et le rendement moyen par arbre, puis calculer le rendement total.</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>arbres = int(input("Entrez le nombre d'arbres : "))
+rendement = float(input("Entrez le rendement moyen par arbre (en kg) : "))
+
+total = arbres * rendement
+print("Le rendement total du champ est de", total, "kg.")</code></pre>
+          <p class="note"><strong>Explication :</strong> Rendement total = <code>arbres × rendement</code>.</p>
+        </details>
+      </div>
+
+      <!-- Cacao 3 -->
+      <div class="exercise">
+        <p class="exercise-title">Champ de cacao 3 — Rendement satisfaisant / moyen / insuffisant</p>
+        <p><strong>Énoncé :</strong> Demander un rendement attendu et comparer avec le rendement calculé : satisfaisant (≥), moyen (80%–99%), insuffisant (&lt;80%).</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>attendu = float(input("Entrez le rendement total attendu (en kg) : "))
+
+if total >= attendu:
+    print("Le rendement est satisfaisant.")
+elif total >= 0.8 * attendu:
+    print("Le rendement est moyen.")
+else:
+    print("Le rendement est insuffisant.")</code></pre>
+          <p class="note"><strong>Explication :</strong> 80% de l’attendu = <code>0.8 * attendu</code>. On utilise <code>if / elif / else</code>.</p>
+        </details>
+      </div>
+
+      <!-- Cacao 4 -->
+      <div class="exercise">
+        <p class="exercise-title">Champ de cacao 4 — Densité d’arbres par hectare</p>
+        <p><strong>Énoncé :</strong> Lire la surface et le nombre d’arbres, calculer la densité (arbres/hectare) et comparer à 120 arbres/hectare.</p>
+
+        <details class="corr">
+          <summary>Voir la correction</summary>
+          <pre><code>surface = float(input("Entrez la surface du champ (en hectares) : "))
+arbres = int(input("Entrez le nombre d'arbres : "))
+
+densite = arbres / surface
+print("La densité d'arbres est de", densite, "arbres/hectare.")
+
+densite_opt = 120
+
+if densite == densite_opt:
+    print("La densité est optimale.")
+elif densite > densite_opt:
+    print("La densité est trop dense.")
+else:
+    print("La densité est trop faible.")</code></pre>
+          <p class="note"><strong>Explication :</strong> Densité = <code>arbres / surface</code>. On compare ensuite à la densité optimale.</p>
+        </details>
+      </div>
+
+    </div>
   </section>
+  <!-- =================== FIN COURS & EXERCICES =================== -->
 
   <!-- Ressources -->
   <section id="ressources">
@@ -539,17 +843,17 @@ print(L[0])</code></pre>
     9: [
       {
         q: "Que va afficher ce code ?",
-        code: 'class Voiture:\n    def __init__(self, marque):\n        self.marque = marque\n\nv = Voiture("Toyota")\nprint(v.marque)',
+        code: 'class Voiture:\n    def _init_(self, marque):\n        self.marque = marque\n\nv = Voiture("Toyota")\nprint(v.marque)',
         choices: ["Voiture", "marque", "Toyota", "Erreur"],
         answer: 2,
         explain: 'L’attribut marque reçoit "Toyota", puis on l’affiche.'
       },
       {
-        q: "À quoi sert __init__ ?",
+        q: "À quoi sert _init_ ?",
         code: "",
         choices: ["Initialiser l’objet", "Supprimer l’objet", "Créer une boucle", "Afficher le code"],
         answer: 0,
-        explain: "__init__ initialise les attributs lors de la création."
+        explain: "_init_ initialise les attributs lors de la création."
       }
     ]
   };
@@ -564,12 +868,12 @@ print(L[0])</code></pre>
   function makeQuizCard(item, index){
     const letters = ["A", "B", "C", "D"];
     const codeBlock = item.code && item.code.trim().length
-      ? `<pre><code>${escapeHtml(item.code)}</code></pre>`
+      ? <pre><code>${escapeHtml(item.code)}</code></pre>
       : "";
 
     const choicesHtml = item.choices.map((c, i) => {
       const correct = (i === item.answer) ? "true" : "false";
-      return `<button class="quiz-choice" data-correct="${correct}">${letters[i]}) ${escapeHtml(c)}</button>`;
+      return <button class="quiz-choice" data-correct="${correct}">${letters[i]}) ${escapeHtml(c)}</button>;
     }).join("");
 
     return `
