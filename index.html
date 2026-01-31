@@ -328,6 +328,15 @@
       color:var(--muted);
       font-weight:700;
     }
+    photo-profil{
+  display:block;
+  margin: 20px auto;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #e6e6e6;
+}
   </style>
 </head>
 
@@ -353,11 +362,14 @@
   <h1>Mon premier site</h1>
   <p class="subtitle">Formation Python – Débutant à Licence</p>
 
-  <section id="presentation">
-    <h2>Présentation</h2>
-    <p>Je m'appelle <strong>Ousmane</strong>. Ce site a pour objectif de proposer une formation Python claire, progressive et accessible.</p>
-    <p><strong>Pays :</strong> Maroc</p>
-  </section>
+ <section id="presentation">
+  <h2>Présentation</h2>
+
+  <img src="profil.jpeg" alt="Photo de Ousmane" class="photo-profil">
+
+  <p>Je m'appelle <strong>Ousmane</strong>. Ce site a pour objectif de proposer une formation Python claire, progressive et accessible.</p>
+  <p><strong>Pays :</strong> Maroc</p>
+</section>
 
   <section id="python">
     <h2>Formation Python complète</h2>
